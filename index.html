@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Camp Inn | Campsite & Smallholding</title>
+  <meta name="description" content="The Camp Inn is a peaceful, family-friendly campsite and smallholding with a natural rural feel." />
+
+  <style>
+    :root {
+      --cream: #f7eedc;
+      --dark-green: #2f421e;
+      --sage: #7a8b55;
+      --brown: #7a5632;
+      --beige: #d7be8a;
+      --barn-red: #8e3f2f;
+      --white: #fffaf0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--cream);
+      color: var(--dark-green);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--dark-green);
+      color: var(--cream);
+      padding: 16px 24px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: var(--cream);
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      border-bottom: 8px solid var(--sage);
+      background:
+        linear-gradient(rgba(247, 238, 220, 0.88), rgba(247, 238, 220, 0.88)),
+        radial-gradient(circle at top left, #d7be8a 0, transparent 30%),
+        radial-gradient(circle at bottom right, #7a8b55 0, transparent 25%);
+    }
+
+    .hero-content {
+      max-width: 900px;
+      border: 3px solid var(--sage);
+      padding: 48px 32px;
+      background: rgba(255, 250, 240, 0.82);
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(47, 66, 30, 0.15);
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: 1;
+      margin: 0 0 14px;
+      color: var(--dark-green);
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      text-align: center;
+      margin-bottom: 16px;
+      color: var(--dark-green);
+    }
+
+    h3 {
+      color: var(--brown);
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-size: 24px;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .subtagline {
+      font-size: 18px;
+      letter-spacing: 1px;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--dark-green);
+      color: var(--cream);
+      padding: 14px 24px;
+      margin: 8px;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: bold;
+      border: 2px solid var(--dark-green);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--dark-green);
+    }
+
+    section {
+      padding: 64px 20px;
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .intro {
+      max-width: 850px;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 19px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+      margin-top: 32px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 2px solid var(--beige);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 18px rgba(47, 66, 30, 0.08);
+    }
+
+    .feature-list {
+      columns: 2;
+      max-width: 800px;
+      margin: 24px auto 0;
+      font-size: 18px;
+    }
+
+    .feature-list li {
+      margin-bottom: 10px;
+    }
+
+    .rules-box {
+      background: var(--white);
+      border: 3px solid var(--sage);
+      border-radius: 24px;
+      padding: 30px;
+      max-width: 850px;
+      margin: 30px auto 0;
+    }
+
+    .rules-box ul {
+      padding-left: 22px;
+    }
+
+    .booking {
+      background: var(--dark-green);
+      color: var(--cream);
+      max-width: none;
+      text-align: center;
+    }
+
+    .booking h2 {
+      color: var(--cream);
+    }
+
+    .booking .button {
+      background: var(--cream);
+      color: var(--dark-green);
+      border-color: var(--cream);
+    }
+
+    footer {
+      background: var(--brown);
+      color: var(--cream);
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    @media (max-width: 700px) {
+      nav a {
+        display: inline-block;
+        margin: 4px 6px;
+      }
+
+      .feature-list {
+        columns: 1;
+      }
+
+      .hero-content {
+        padding: 32px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#camping">Camping</a>
+      <a href="#smallholding">Smallholding</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#rules">Rules</a>
+      <a href="#book">Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Welcome to The Camp Inn</h1>
+        <p class="tagline">Campsite & Smallholding</p>
+        <p class="subtagline">Family-friendly | Peaceful | Natural | Rural</p>
+        <p>A peaceful rural campsite and smallholding where families, couples and visitors can slow down, enjoy open space, meet the animals and experience simple countryside living.</p>
+        <a class="button" href="#book">Book Your Stay</a>
+        <a class="button secondary" href="#facilities">View Facilities</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>A peaceful countryside escape</h2>
+      <p class="intro">
+        The Camp Inn is a small, family-friendly campsite and smallholding created for people who enjoy fresh air, open space and a slower pace of life. We are not a large commercial holiday park. Our aim is to offer a relaxed and welcoming place where guests can camp, unwind, spend time together and enjoy the natural surroundings.
+      </p>
+    </section>
+
+    <section>
+      <h2>Why visitors love The Camp Inn</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Peaceful rural setting</h3>
+          <p>Enjoy open space, fresh air and a slower pace of life.</p>
+        </div>
+        <div class="card">
+          <h3>Family-friendly</h3>
+          <p>A welcoming place for families, with space for children to play safely.</p>
+        </div>
+        <div class="card">
+          <h3>Smallholding animals</h3>
+          <p>Meet our animals and enjoy the charm of a working smallholding.</p>
+        </div>
+        <div class="card">
+          <h3>Natural and relaxed</h3>
+          <p>Simple countryside camping without the busy holiday park feel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="camping">
+      <h2>Camping at The Camp Inn</h2>
+      <p class="intro">
+        Our campsite is designed to be simple, peaceful and family-friendly. Guests can enjoy a relaxed stay in a natural setting, with space to unwind and enjoy the countryside.
+      </p>
+      <ul class="feature-list">
+        <li>Grass pitches</li>
+        <li>Family-friendly camping</li>
+        <li>Dogs welcome</li>
+        <li>Peaceful rural setting</li>
+        <li>Toilet and shower facilities</li>
+        <li>Smallholding animals nearby</li>
+        <li>Play area</li>
+        <li>BBQs and fire pits where permitted</li>
+      </ul>
+    </section>
+
+    <section id="smallholding">
+      <h2>Our smallholding</h2>
+      <p class="intro">
+        The Camp Inn is more than a campsite. It is also a smallholding, giving guests the chance to enjoy a rural farm-style setting with animals, open land and a relaxed countryside atmosphere.
+      </p>
+      <div class="cards">
+        <div class="card"><h3>Pygmy goats</h3><p>Friendly animals and a lovely smallholding feel.</p></div>
+        <div class="card"><h3>Chickens</h3><p>A classic countryside touch for families to enjoy.</p></div>
+        <div class="card"><h3>Animal feeding</h3><p>Animal feed bags available where suitable and supervised.</p></div>
+      </div>
+    </section>
+
+    <section id="facilities">
+      <h2>Facilities</h2>
+      <ul class="feature-list">
+        <li>Toilet and shower facilities</li>
+        <li>Fresh water point</li>
+        <li>Waste and recycling area</li>
+        <li>Chemical toilet disposal point</li>
+        <li>Playground</li>
+        <li>Smallholding animals</li>
+        <li>Reception/check-in point</li>
+        <li>Bar/cafe area</li>
+        <li>Fire safety points</li>
+      </ul>
+    </section>
+
+    <section id="rules">
+      <h2>Keeping everyone safe</h2>
+      <p class="intro">
+        We want every guest to enjoy a peaceful, safe and family-friendly stay. Our site rules are in place to protect visitors, children, animals and the countryside around us.
+      </p>
+
+      <div class="rules-box">
+        <ul>
+          <li>Please check in on arrival.</li>
+          <li>Quiet hours are from 10pm to 8am.</li>
+          <li>Please drive slowly — children and animals on site.</li>
+          <li>Children must be supervised at all times.</li>
+          <li>Dogs must be kept on leads and cleaned up after.</li>
+          <li>Please use bins provided and leave your pitch tidy.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="booking" id="book">
+      <h2>Book your stay</h2>
+      <p>
+        To book your stay or make an enquiry, please visit our booking page or contact us directly.
+      </p>
+      <p>
+        The Camp Inn operates as a Campfire Companions Club Certified Location. All guests must hold current membership, and non-members can be enrolled automatically at the point of booking.
+      </p>
+      <a class="button" href="mailto:hello@thecampinn.co.uk">Make a Booking Enquiry</a>
+    </section>
+
+    <section id="contact">
+      <h2>Find us</h2>
+      <p class="intro">
+        The Camp Inn<br />
+        Campsite & Smallholding<br />
+        Spilsby, Lincolnshire<br /><br />
+        Website: www.thecampinn.co.uk<br />
+        Email: hello@thecampinn.co.uk<br />
+        Phone: [add your number]
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>The Camp Inn</strong></p>
+    <p>Campsite & Smallholding | Family-friendly | Peaceful | Natural | Rural</p>
+    <p>Please drive slowly — children and animals on site.</p>
+  </footer>
+</body>
+</html>
